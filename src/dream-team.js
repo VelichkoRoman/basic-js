@@ -1,16 +1,20 @@
 const CustomError = require("../extensions/custom-error");
 
+
+// 'AABDEEGKPP' );
 module.exports = function createDreamTeam(members) {
-  let newArr=[];
-  if (typeof members!=='string' || members.length <= 0) {return false};
-  if (typeof members ==='string'){
+   
+ let newArr=[];
+if (!members) return false;
+ for (let i = 0; i < members.length; i++) {
+  if (typeof (members[i]) == 'string') {
+      let preArr = members[i].slice(0,1).toUpperCase();
+      newArr.push(preArr);
+      
+  }
   
-  let preSorted = members.filter(
-     if (element==="string") { return element}
-     else {return false});
+ 
+} return newArr.sort();
    
-  newArr = preSorted.forEach((element) => element.slice(0,1).toUpperCase)).sort().join('');
-   
-  }; 
 };
 
