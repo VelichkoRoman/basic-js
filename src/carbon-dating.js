@@ -8,7 +8,7 @@ module.exports = function dateSample(sampleActivity) {
 
   let k = 0.693/HALF_LIFE_PERIOD;
   
-  let age = Math.ceil((MODERN_ACTIVITY/sampleActivity)/k);
+  let age = Math.ceil((Math.log(MODERN_ACTIVITY/sampleActivity))/k);
   
   return age;
 };
