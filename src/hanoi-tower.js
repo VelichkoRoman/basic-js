@@ -1,13 +1,13 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function calculateHanoi(disksNumber, turnsSpeed) {
-  
-if (diskNumber!=0 || turnsSpeed!=0){
+  let turns;
+  let seconds;
+if (disksNumber=0 || turnsSpeed!=0){
 
- let turns = (Math.pow(2,disksNumber))-1;
- let seconds = Math.floor((turns/turnsSpeed)*3600);
+ turns = Math.pow(2,disksNumber)-1;
+ seconds = Math.floor((turns*3600)/turnsSpeed);
 
 }
-
-  return {turns, seconds}
+  return {turns, seconds};
 };
