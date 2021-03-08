@@ -1,7 +1,7 @@
 const CustomError = require("../extensions/custom-error");
 
 const chainMaker = {
-  newArr:[],
+  newArr: [],
   
   getLength() {
     return this.newArr.length;
@@ -13,16 +13,16 @@ const chainMaker = {
   },
 
   removeLink(position) {
-    if (position < 1 ||!(Number.isInteger(position))||position>this.newArr.length) {
+    if (position < 1 || !(Number.isInteger(position)) || position>this.newArr.length) {
       this.newArr = []
-      throw new Error('')
+      throw new Error('Error')
     }
     this.newArr.splice(position-1, 1)
     return this
-   },
+  },
 
   reverseChain() {
-    this.newArr.reverse();
+   this.newArr.reverse();
     return this;
   },
 
