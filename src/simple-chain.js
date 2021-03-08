@@ -13,18 +13,13 @@ const chainMaker = {
   },
 
   removeLink(position) {
-    if (!isNaN(position)) {
-      for (let i = 0; i < this.newArr.length; i++) {
-        if (i == position - 1) {
-          this.newArr.splice(i, 1);
-        }
-      }
-    } else {
-      this.newArr = [];
-      throw new Error('Error');
+    if (position < 1 ||!(Number.isInteger(position))||position>this.newArr.length) {
+      this.newArr = []
+      throw new Error('')
     }
-    return this;
-  },
+    this.newArr.splice(position-1, 1)
+    return this
+   },
 
   reverseChain() {
     this.newArr.reverse();
